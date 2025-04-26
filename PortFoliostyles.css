@@ -1,0 +1,374 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9ecef;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(180deg, #223950, #34495e);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+header p span {
+  color: #1abc9c;
+  transition: color 0.5s;
+}
+
+header p span:hover {
+  color: #e74c3c;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+#about b, #about strong {
+  transition: color 0.5s;
+}
+
+#about b:hover, #about strong:hover {
+  color: #e76f51;
+}
+
+.download-resume {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.download-resume:hover {
+  background-color: #e74c3c;
+}
+
+.project-cards, .certificate-cards {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card, .testimonial-card, .certificate-card {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover, .testimonial-card:hover, .certificate-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3, .testimonial-card p, .certificate-card h4 {
+  color: #2c3e50;
+}
+
+.project-card a, .certificate-card a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-card a:hover, .certificate-card a:hover {
+  color: #e74c3c;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-item {
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 300px;
+}
+
+.skill-progress {
+  width: 50px;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress div {
+  height: 100%;
+  background-color: #3498db;
+}
+#experience {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+#experience h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* Section Title */
+#Experience .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Experience Container */
+#Experience .experience-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Experience Item Card */
+#Experience .experience-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Experience .experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Title */
+#Experience .job-title {
+  font-size: 36px;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Company and Duration */
+#Experience .company {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+#Experience .duration {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 0.75rem;
+}
+
+/* Role */
+#Experience .role {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dfe6e9;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsibilities List */
+#Experience .responsibilities {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+#Experience .responsibilities li {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+#Experience .responsibilities li::before {
+  content: "✔ ";
+  color: #2ecc71;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Experience .section-title {
+      font-size: 16px;
+  }
+
+  #Experience .experience-container {
+      grid-template-columns: 1fr;
+  }
+
+  #Experience .experience-item {
+      padding: 16px;
+  }
+
+  #Experience .job-title {
+      font-size: 24px;
+  }
+
+  #Experience .company {
+      font-size: 0.50rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #Experience .section-title {
+      font-size: 20px;
+  }
+
+  #Experience .job-title {
+      font-size: 16px;
+  }
+
+  #Experience .company {
+      font-size: 14px;
+  }
+
+  #Experience .duration {
+      font-size: 14px;
+  }
+
+  #Experience .role {
+      font-size: 16px;
+  }
+
+  #Experience .responsibilities li {
+      font-size: 16px;
+  }
+}
+#testimonials {
+  background-color: #f8f9fa;
+}
+.testimonial-card {
+  padding-left: 20px;
+  margin: 10px 0;
+  width: auto;
+  text-align: center;
+  border-left: 5px solid #1abc9c;
+  border-radius: 5px;
+}
+
+.testimonial-card p:first-child {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.testimonial-card p:last-child {
+  font-size: 12px;
+  color: #2c3e50;
+}
+
+#certificates {
+  background-color: white;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+#contact{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+#contact form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-color: #1abc9c;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#contact button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #e74c3c;
+}
