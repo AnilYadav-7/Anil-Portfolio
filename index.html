@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anil Yadav - Portfolio</title>
+<style>
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e9ecef;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(180deg, #223950, #34495e);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+header p span {
+  color: #1abc9c;
+  transition: color 0.5s;
+}
+
+header p span:hover {
+  color: #e74c3c;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #1abc9c;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+#about b, #about strong {
+  transition: color 0.5s;
+}
+
+#about b:hover, #about strong:hover {
+  color: #e76f51;
+}
+
+.download-resume {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.download-resume:hover {
+  background-color: #e74c3c;
+}
+
+.project-cards, .certificate-cards {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card, .testimonial-card, .certificate-card {
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover, .testimonial-card:hover, .certificate-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h3, .testimonial-card p, .certificate-card h4 {
+  color: #2c3e50;
+}
+
+.project-card a, .certificate-card a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-card a:hover, .certificate-card a:hover {
+  color: #e74c3c;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-item {
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 300px;
+}
+
+.skill-progress {
+  width: 50px;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress div {
+  height: 100%;
+  background-color: #3498db;
+}
+#experience {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+#experience h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* Section Title */
+#Experience .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Experience Container */
+#Experience .experience-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Experience Item Card */
+#Experience .experience-item {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Experience .experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Title */
+#Experience .job-title {
+  font-size: 36px;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Company and Duration */
+#Experience .company {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+#Experience .duration {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 0.75rem;
+}
+
+/* Role */
+#Experience .role {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #dfe6e9;
+  padding-bottom: 0.5rem;
+}
+
+/* Responsibilities List */
+#Experience .responsibilities {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+#Experience .responsibilities li {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+#Experience .responsibilities li::before {
+  content: "✔ ";
+  color: #2ecc71;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Experience .section-title {
+      font-size: 16px;
+  }
+
+  #Experience .experience-container {
+      grid-template-columns: 1fr;
+  }
+
+  #Experience .experience-item {
+      padding: 16px;
+  }
+
+  #Experience .job-title {
+      font-size: 24px;
+  }
+
+  #Experience .company {
+      font-size: 0.50rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #Experience .section-title {
+      font-size: 20px;
+  }
+
+  #Experience .job-title {
+      font-size: 16px;
+  }
+
+  #Experience .company {
+      font-size: 14px;
+  }
+
+  #Experience .duration {
+      font-size: 14px;
+  }
+
+  #Experience .role {
+      font-size: 16px;
+  }
+
+  #Experience .responsibilities li {
+      font-size: 16px;
+  }
+}
+#testimonials {
+  background-color: #f8f9fa;
+}
+.testimonial-card {
+  padding-left: 20px;
+  margin: 10px 0;
+  width: auto;
+  text-align: center;
+  border-left: 5px solid #1abc9c;
+  border-radius: 5px;
+}
+
+.testimonial-card p:first-child {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.testimonial-card p:last-child {
+  font-size: 12px;
+  color: #2c3e50;
+}
+
+#certificates {
+  background-color: white;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 5px 0;
+}
+#contact{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+#contact form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-color: #1abc9c;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#contact button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #e74c3c;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Padi Anil Yadav</h1>
+        <p>
+            <span>Java Full Stack Developer</span> |
+            <span>Creative Intern</span> |
+            <span>Problem Solver</span>
+        </p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#Experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+    </header>
+
+    <!--About Me-->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Padi Anil Kumar Yadav, An highly motivated Java developer with 1 year and 4 months of hands-on experience, 
+            including 10 months as an intern and 6 months as a full-time engineer at NVIDIA, along with a 3-month internship at Sakshath Technologies.
+            Skilled in backend development and system customization using Java, Spring Boot, RESTful APIs, and JavaScript. 
+            Proven ability to support internal applications and deliver reliable, scalable solutions. 
+            Eager to contribute to dynamic teams and grow as a Java Full Stack Developer.
+        </p>
+        <a href="file:///C:/Users/padia/Downloads/AnilKumar-JavaFullStack.pdf" class="download-resume">Download Resume</a>
+    </section>
+
+    <!--Skills-->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <p>
+            I have a diverse skill set that includes both frontend and backend development, as well as database management. Here are some of the technologies I'm proficient in:
+        </p>
+        <div class="skills-container">
+            <div class="skill-item">
+                <span>Frontend</span>
+                <div class="skill-progress"><div style="width: 80%;"></div></div>
+                <span>HTML, CSS, JS, <span>React (Learning)</span>, Bootstrap</span>
+            </div>
+            <div class="skill-item">
+                <span>Backend</span>
+                <div class="skill-progress"><div style="width: 50%;"></div></div>
+                <span>Core Java, Spring Boot, Hibernate, <span>MicroServices (Learning)</span>, <span>Spring Security (Learning)</span></span>
+            </div>
+            <div class="skill-item">
+                <span>Database</span>
+                <div class="skill-progress"><div style="width: 100%;"></div></div>
+                <span>MySQL</span>
+            </div>
+            <div class="skill-item">
+                <span>Tools</span>
+                <div class="skill-progress"><div style="width: 60%;"></div></div>
+                <span>Eclipse IDE, IntelliJ IDEA, STS4, VS Code, GitHub, MySQL Workbench, <span>AWS (Learning)</span>, <span>Docker (Learning)</span></span>
+            </div>
+        </div>
+    </section>
+    <!--Experience-->
+    <section id="Experience">
+        <h2 class="section-title">My Professional Experience</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <h3 class="job-title">Project Supporter</h3>
+                <p class="company">NVIDIA</p>
+                <p class="duration">Duration: Dec 2023 - March 2025 (1 year 4 months)</p>
+                <p class="role">Role: Associate Process Executive</p>
+                <ul class="responsibilities">
+                    <li>Supported Java backend development, contributing to internal applications using Spring JDBC and Spring Web MVC.</li>
+                    <li>Assisted in building secure authentication, role-based access control, and RESTful APIs for data and user management.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3 class="job-title">Intern</h3>
+                <p class="company">Developers Arena</p>
+                <p class="duration">Duration: 6 months</p>
+                <p class="role">Role: Java Full Stack Developer Intern</p>
+                <ul class="responsibilities">
+                    <li>Currently working as a Java Full Stack Developer Intern, contributing to weekly project tasks.</li>
+                    <li>Utilized Java, Spring Boot, HTML, CSS, JavaScript, and MySQL for development.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3 class="job-title">Intern</h3>
+                <p class="company">Sakshath Technologies</p>
+                <p class="duration">Duration: May 2023 - August 2023 (3 months)</p>
+                <p class="role">Role: Intern</p>
+                <ul class="responsibilities">
+                    <li>Worked as a SharePoint Developer on a real-time project using Microsoft Power Platform.</li>
+                    <li>Leveraged PowerApps, SharePoint Online, and Power Automate for development.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--Projects-->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>MedSync-Hospital Management</h3>
+                <p>Java Backend Project</p>
+                <ol>
+                    <li><a href="#">MedSync-Hospital Management</a></li>
+                </ol>
+                <p>Technologies: Java, Spring Boot, MySQL, Hibernate, RESTful APIs</p>
+            </div>
+            <div class="project-card">
+                <h3>FrontEnd Projects</h3>
+                <p>FrontEnd client Projects using HTML,CSS and JAVASCRIPT</p>
+                <ol>
+                    <li><a href="PortfolioTask.html">HTML-Personal Portfolio Website</a></li>
+                    <li><a href="portFolio2.html">CSS-Responsive Portfolio Website</a></li>
+                    <li><a href="#">JavaScript-Weather App with External API</a></li>
+                    <li><a href="D:\Developers Arena\ToDoTask\ToDoTask.html">JavaScript-To-Do List App</a></li>
+                </ol>
+            </div>
+            <div class="project-card">
+                <h3>ADVANCED FRONTEND DEVELOPMENT</h3>
+                <p>Advanced FrontEnd client Projects using React JS</p>
+                <ol>
+                    <li><a href="#">React Counter App.</a></li>
+                    <li><a href="#">Blog App with React Router.</a></li>
+                    <li><a href="#">Task Manager App with React and Context API.</a></li>
+                </ol>
+            </div>
+            <div class="project-card">
+                <h3>BACKEND DEVELOPMENT WITH JAVA (SPRING BOOT) AND SQL DATABASE</h3>
+                <p>BackEnd client Projects using Java,Spring Boot and SQL Database</p>
+                <ol>
+                    <li><a href="#">CRUD Task Management API.</a></li>
+                    <li><a href="#">Task Management API with SQL Database integration.</a></li>
+                    <li><a href="#">Add user authentication to the task management API.</a></li>
+                </ol>
+            </div>
+            <div class="project-card">
+                <h3>FULL STACK DEVELOPMENT (FRONTEND + BACKEND WITH SQL DATABASE)</h3>
+                <p>Full Stack Development client Projects using FrontEnd and BackEnd with SQL Database</p>
+                <ol>
+                    <li><a href="#">Full-Stack Task Manager App.</a></li>
+                    <li><a href="#">Real-Time Chat App.</a></li>
+                    <li><a href="#">Test the Task Management API.</a></li>
+                    <li><a href="#">Deploy Full-Stack Task Manager.</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div>
+            <div class="testimonial-card">
+                <p>
+                    "I'm Anil Yadav and im currently working as a Java Full Stack Developer Intern at <strong>Developers Arena </strong>, contributing to the development of a weekly project Tasks using Java, Spring Boot, Html, Css, JavaScript and MySQL."
+                </p>
+                <p>- Intern, Developers Arena Internship</p>
+            </div>
+            <div class="testimonial-card">
+                <p>
+                    "I'm Anil Yadav and I'm a dedicated fresher who’s excelled in backend development with Java, Spring Boot, and MySQL, created a secure and efficient MedSync - Hospital Management applications. I’m eager to contribute my skills to a dynamic team and grow as a Java Full Stack Developer."
+                </p>
+                <p>- Project Supporter, Ranstard Pvt Ltd</p>
+            </div>
+        </div>
+    </section>
+    <section id="certificates">
+        <h2>My Certificates</h2>
+        <p>
+            Explore my certifications that demonstrate my commitment to learning and growth.
+        </p>
+        <div>
+            <h3>Certificates as Cards (Recommended)</h3>
+            <div class="certificate-cards">
+                <div class="certificate-card">
+                    <h4>Java Full Stack</h4>
+                    <p>Skills: Core Java, MySQL, HTML, CSS, JavaScript</p>
+                    <p>Issuer: JSPIDER</p>
+                    <p>Date: April 2023</p>
+                    <a href="file:///C:/Users/padia/Downloads/JFS-J%20spider%20Certificate.pdf">View Certificate</a>
+                </div>
+                <div class="certificate-card">
+                    <h4>Java Full Stack</h4>
+                    <p>Skills: Core Java, Spring Boot, Spring Secuirty, Hibernate, MicroServices, MySQL, GitHub</p>
+                    <p>Issuer: Front Lines Media</p>
+                    <p>Date: February 2025</p>
+                    <a href="file:///C:/Users/padia/Downloads/Java%20Full%20Stack%20cetificate.pdf">View Certificate</a>
+                </div>
+                <div class="certificate-card">
+                    <h4>SharePoint Online</h4>
+                    <p>Skills: SharePoint Online, Microsoft Power App</p>
+                    <p>Issuer: Udemy</p>
+                    <p>Date: May 2023</p>
+                    <a href="file:///C:/Users/padia/Downloads/SharePoint%20Certificate.pdf">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>
+            I'm excited to connect and explore opportunities With my relavant skills. Drop me a message!
+        </p>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required aria-label="Your Name">
+            <input type="email" placeholder="Your Email" required aria-label="Your Email">
+            <textarea placeholder="Your Message" required aria-label="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
